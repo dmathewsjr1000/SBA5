@@ -1,7 +1,7 @@
 {
   "name": "sba5",
   "version": "1.0.0",
-  "description": "Making a company HR employment system",
+  "description": "Making a company HR employment system tree to make req",
   "main": "index.js",
   "type": "module",
   "scripts": {
