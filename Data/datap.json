@@ -1,0 +1,16 @@
+{
+    "staff": [{
+        
+        "employee_id": 1,
+        "name": "Dennis",
+        "lastname": "Mathews",
+        "roles":  {
+            "position": ["Admin", "Tech", "Developer", "Employee", "HR", "Management"],
+            "dept": "Corporate" 
+        }
+    }],
+    "budget": 500000,
+    "startup": true,
+    "development": false,
+    "deployment" : false
+}

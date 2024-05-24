@@ -1,0 +1,6 @@
+{
+    "employee_id": 1,
+    "dept": "Corporate",
+    "jobtitle": "CEO",
+    "roles": ["Admin", "Tech", "Developer", "Employee", "HR", "Management"] 
+}

@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 // Querying all employees data
 router.get("/staff", async (req, res) => {
   try {
-    const collection = await db.collection("employees");
+    const collection = await db.collection("project");
     const query = await collection.find({}).toArray();
     console.log(query);
     if (!query) res.send("Not Found").status(404);
@@ -21,7 +21,7 @@ router.get("/staff", async (req, res) => {
 });
 // Querying employee data
 router.get("/:id", async (req, res) => {
-  const collection = await db.collection("employees");
+  const collection = await db.collection("project");
   const query = { id: Number(req.params.id) };
   const result = await collection.findOne(query);
 
@@ -31,7 +31,7 @@ router.get("/:id", async (req, res) => {
 });
 // Hiring a new employee
 router.post("/", async (req, res) => {
-  const collection = await db.collection("employees");
+  const collection = await db.collection("project");
   const newDocument = req.body;
   console.log(newDocument);
   const result = await collection.insertOne(newDocument);
@@ -41,7 +41,7 @@ router.post("/", async (req, res) => {
 // Updating employee information
 router.patch("/:id", async (req, res) => {
   try {
-    const collection = await db.collection("employees");
+    const collection = await db.collection("project");
     const id = { id: Number(req.params.id) };
     const query = await collection.findOne(id);
     console.log(query);
@@ -62,7 +62,7 @@ router.patch("/:id", async (req, res) => {
 // Deleting a employee
 router.delete("/:id", async (req, res) => {
   try {
-    const collection = await db.collection("employees");
+    const collection = await db.collection("project");
     const id = { id: Number(req.params.id) };
     const query = await collection.findOne(id);
     const result = await collection.deleteOne(query);
